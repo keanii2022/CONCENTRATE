@@ -13,83 +13,98 @@ var userName = prompt('WHAT IS YOUR NAME? Type it in and press OK to start')
 
 
 //STATE VARIABLES 
-let testCard = {
-    front:'https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-6/240672537_1204656580051848_4414292322553119668_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=QYZAaxt4svoAX-nxLB0&_nc_ht=scontent-sjc3-1.xx&oh=00_AT_0ScMT2bW5Hvxq5SBeCm0aTa9lVGCYQBKne6LDlQsgaA&oe=622D9D0D',
+let testCards = [{
+    front:'https://external-preview.redd.it/KZstz_h1NDJxIy_hpQG0Bpe6AdI5gHgbnDGTNYEtXXo.jpg?auto=webp&s=9ec351afd820024825f7c342f7e048bcc0a44561',
     back: 'https://games.lol/wp-content/uploads/2020/08/among-us-free-full-version-150x150.jpg.webp',
-    id: 1
-}
+    id: 1},
+    {front:'https://is3-ssl.mzstatic.com/image/thumb/Purple114/v4/e4/32/52/e4325222-d1d6-c01e-4df0-b917f5878ccd/source/256x256bb.jpg',
+    // back: 'https://games.lol/wp-content/uploads/2020/08/among-us-free-full-version-150x150.jpg.webp',
+    id: 2},
+    {front:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPi_YxpfxUGGoP5qxzFPOuzftLmg-uCCPS4Q&usqp=CAU',
+    // back: 'https://games.lol/wp-content/uploads/2020/08/among-us-free-full-version-150x150.jpg.webp',
+    id: 3},
+    {front:'https://www.androidfreeware.net/img2/among-us-soundboard-sound-effect-crewmate-imposter.jpg',
+    // back: 'https://games.lol/wp-content/uploads/2020/08/among-us-free-full-version-150x150.jpg.webp',
+    id: 4},
+    {front:'https://external-preview.redd.it/kH6RTFKE40_NpoSyWQx_Lj9GDGNGO1Atenr3jcMdd64.jpg?auto=webp&s=ac80cee1cc3df35f32c1aadb7f00cfb4bbeade0d',
+    // back: 'https://games.lol/wp-content/uploads/2020/08/among-us-free-full-version-150x150.jpg.webp',
+    id: 5},
+    {front:'https://external-preview.redd.it/9-A-34ddmlXCMrLCTPrJ7MwTiqzZXycQOKC178vHMPs.jpg?auto=webp&s=2f0ea9f9b0c2631ba31183b8f49ec439b14c1ce4',
+    // back: 'https://games.lol/wp-content/uploads/2020/08/among-us-free-full-version-150x150.jpg.webp',
+    id: 6},
+]
 
 document.getElementById('1') 
 let card1 = document.getElementById('1').childNodes[1]
 console.log(card1)
 
-card1.src = testCard.back
+card1.src = testCards[0].back
 
 document.getElementById('2') 
 let card2 = document.getElementById('2').childNodes[1]
 console.log(card2)
 
-card2.src = testCard.back
+card2.src = testCards[0].back
 
 document.getElementById('3') 
 let card3 = document.getElementById('3').childNodes[1]
 console.log(card3)
 
-card3.src = testCard.back
+card3.src = testCards[0].back
 
 document.getElementById('4') 
 let card4 = document.getElementById('4').childNodes[1]
 console.log(card4)
 
-card4.src = testCard.back
+card4.src = testCards[0].back
 
 document.getElementById('5') 
 let card5 = document.getElementById('5').childNodes[1]
 console.log(card5)
 
-card5.src = testCard.back
+card5.src = testCards[0].back
 
 document.getElementById('6') 
 let card6 = document.getElementById('6').childNodes[1]
 console.log(card6)
 
-card6.src = testCard.back
+card6.src = testCards[0].back
 
 document.getElementById('7') 
 let card7 = document.getElementById('7').childNodes[1]
 console.log(card7)
 
-card7.src = testCard.back
+card7.src = testCards[0].back
 
 document.getElementById('8') 
 let card8 = document.getElementById('8').childNodes[1]
 console.log(card8)
 
-card8.src = testCard.back
+card8.src = testCards[0].back
 
 document.getElementById('9') 
 let card9 = document.getElementById('9').childNodes[1]
 console.log(card9)
 
-card9.src = testCard.back
+card9.src = testCards[0].back
 
 document.getElementById('10') 
 let card10 = document.getElementById('10').childNodes[1]
 console.log(card10)
 
-card10.src = testCard.back
+card10.src = testCards[0].back
 
 document.getElementById('11') 
 let card11 = document.getElementById('11').childNodes[1]
 console.log(card11)
 
-card11.src = testCard.back
+card11.src = testCards[0].back
 
 document.getElementById('12') 
 let card12 = document.getElementById('12').childNodes[1]
 console.log(card12)
 
-card12.src = testCard.back
+card12.src = testCards[0].back
 
 // randomize, and place 6 pictures on the board twice, for the .front which is equal to id . when you click it changes source from. front to .back
 
@@ -115,7 +130,18 @@ console.log(typeof divEl, cardEl)
 divEl.addEventListener('click', function(evt) {
     // console.log(evt.target)
     twoClicks.push(evt.target.textContent)
-    card1.src = testCard.front
+    card1.src = testCards[0].front
+    // card2.src = testCards[1].front
+    // card3.src = testCards[2].front
+    // card4.src = testCards[3].front
+    // card5.src = testCards[4].front
+    // card6.src = testCards[5].front
+    // card7.src = testCards[6].front
+    // card8.src = testCards[0].front
+    // card9.src = testCards[1].front
+    // card10.src = testCards[2].front
+    // card11.src = testCards[3].front
+    // card12.src = testCards[4].front
     // console.log(twoClicks)
 
     if (twoClicks.length === 2) {
