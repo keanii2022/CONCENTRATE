@@ -4,7 +4,12 @@ var userName = prompt('WHAT IS YOUR NAME? Type it in and press OK to start')
 ///DAILY GOAL: LIMIT THE CLICKS IN THE twoClicks array - done
               //  Write the match function - done
               // git add git commit?
-//NEW GOAL: 
+//NEW GOAL: FRONT PICS NEED VALUES? -ID 
+//NEED TO FINISH: ADD FACE CARDS/ ADD VALUES/ WHEN MATCHED CARDS STAY FACING .front - TOGGLE BETWEEN
+
+// 
+
+//
 
 
 //STATE VARIABLES 
@@ -86,7 +91,8 @@ console.log(card12)
 
 card12.src = testCard.back
 
-// select all card sources and make them image as the back
+// randomize, and place 6 pictures on the board twice, for the .front which is equal to id . when you click it changes source from. front to .back
+
 
 let board
 let attempts = 0
@@ -107,9 +113,10 @@ console.log(typeof divEl, cardEl)
 
 
 divEl.addEventListener('click', function(evt) {
-    console.log(evt.target)
+    // console.log(evt.target)
     twoClicks.push(evt.target.textContent)
-    console.log(twoClicks)
+    card1.src = testCard.front
+    // console.log(twoClicks)
 
     if (twoClicks.length === 2) {
         if(twoClicks[0] === twoClicks[1]){        
