@@ -1,11 +1,10 @@
     //PROMPT//
     var userName = prompt('WHAT IS YOUR NAME? Type it in and press OK to start')
     //START GAME//
-    function init () {
-        board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,]
-        attempts = [null]
-        }
-
+    // function init () {
+    //     board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,]
+    //     attempts = [null]
+    //     }
     //STATE VARIABLES//
     let testCards = [
 
@@ -33,7 +32,6 @@
     back: 'https://games.lol/wp-content/uploads/2020/08/among-us-free-full-version-150x150.jpg.webp',
     id: 6},
     ]
-
 
     document.getElementById('1') 
     let card1 = document.getElementById('1').childNodes[1]
@@ -107,23 +105,19 @@
     card12.value = testCards[5].id
     console.log(card12.value)
 
-    let board
+    let board = []
     let clicks = 0
     let twoClicks = []
     let divIds = []
-    // console.log(typeof board)
-    // console.log(twoClicks)
-    // console.log(typeof twoClicks.length)
+    let matches = 0
 
     //CACHED ELEMENTS//
     const divEl = document.querySelector('.row')
     const cardEl = document.querySelector('.card')
     const clicksEl = document.querySelector('#clicks')
-
-    // function onClick () {
-    //     clicks += 1;
-    //     document.getElementById("clicks").innerHTML = clicks;
-    // };
+    let winDivEl1 = document.querySelector('.winDiv1')
+    let winDivEl2 = document.querySelector('.winDiv2')
+    let winDivEl3 = document.querySelector('.winDiv3')
 
     // EVENT LISTENER BELOW (1)\\
     // USER CLICKS ON TWO BOXES IN divEl 
@@ -140,21 +134,31 @@
         // IF IMAGES DONT MATCH, REVERT BACK TO ORIGINAL STATE,
         evt.target.src = testCards[idx].front
         divIds.push(evt.target.parentElement.id)
-        if (twoClicks.length === 2) {
+        if (twoClicks.length === 2)       
+        {
         if(twoClicks[0] !== twoClicks[1]){   
             setTimeout(function() 
             {document.getElementById(divIds[0]).childNodes[1].src = testCards[0].back
-            document.getElementById(divIds[1]).childNodes[1].src = testCards[0].back}, 700)
+            document.getElementById(divIds[1]).childNodes[1].src = testCards[0].back}, 500)
         } 
         setTimeout(function() {
             twoClicks.length = 0
         divIds.length = 0   
-        }, 800)
-        
-        }       
-        }   
+        }, 600)
+        }      
+        if(clicks === 12) {
+            winDivEl1.textContent = 'LOCKED IN, LETS GO'
+        } else if(clicks == 13) 
+        winDivEl2.textContent = '..........scratch that, try again.(you lost, buddy)'
+        if(clicks === 15) {
+            winDivEl3.textContent = 'you are cheating >:/'
+        }
+        }
         )
     // USER KEEPS CLICKING UNTIL ALL CARDS HAVE BEEN RENDERED
-    // SCORING:BASED ON NUMBER OF CLICKS/ATTEMPTS
-// WHEN GAME ENDS - RESTART BUTTON - RENDER SCORE
-
+    // SCORING:BASED ON NUMBER OF CLICKS/ATTEMPTS,
+     
+    //NO LOSE LOGIC BECAUSE WE DONT LOSE WE WIN
+// ICEBOX: "YOU WIN" ALERT WHEN MATCHES MATCH
+//ICEBOX: MUSIC
+//FUTURE ENHANCEMENTS: EACH DIV CAN ONLY BE CLICKED ONCE AND THEN DISABLED

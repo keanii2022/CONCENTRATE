@@ -1,5 +1,5 @@
 body {
-    display: flex;
+    display: grid;
     justify-content:center;
 }
 
@@ -16,7 +16,7 @@ body {
 
 .card {
 background-color: rgba(100, 200, 300, 50%);
-display: flex;
+display: grid;
 align-items: center;
 justify-content: center;
 border: 2px solid; 
@@ -39,8 +39,25 @@ img {
 
 span {
     display: flex;
+    align-items: center ;
     border: 2px solid;
     height: 300px;
     width: 150px;
     background-color: orange;
+}
+
+#win1 {
+    display:flex;
+    background: green;
+
+}
+#win2 {
+    display:flex;
+    background: yellow;
+
+}
+#win3 {
+    display:flex;
+    background: red;
+
 }
