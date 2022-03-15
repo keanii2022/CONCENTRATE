@@ -1,10 +1,9 @@
 # CONCENTRATE
-
-![](https://imgur.com/a/tZ3c5p7.jpg)
+!(https://imgur.com/a/tZ3c5p7.jpg)
 
 MADE WITH: HTML/CSS/JS
 
-OPEN GAME: (link)
+OPEN GAME: https://github.com/keanii2022/CONCENTRATE
 
 CONCENTRATE! Match all the cards for a chance to enter the cool club. 
 12 CLICKS = LOCKED IN (WIN)
