@@ -1,6 +1,6 @@
 # CONCENTRATE
 
-![Screenshot:](https://imgur.com/a/wXtnI43)
+![Screenshot:](https://i.imgur.com/Vyb8X8Y.png)
 
 MADE WITH: HTML/CSS/JS
 
