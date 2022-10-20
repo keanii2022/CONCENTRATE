@@ -8,8 +8,9 @@ body {
 }
 
 .board {
-    height: 400px;
-    width: 500px;
+    height: 300px;
+    width: 400px;
     display: flex;
     flex-wrap: wrap;
+    border: 3px solid palevioletred;
 }

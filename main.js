@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    var cardArray = [
+    const cardArray = [
         {
             name:'card-1',
             img:""
@@ -52,16 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
     cardArray.sort(() => 0.5 - Math.random())
     
     const board = document.querySelector('.board')
-    const score = document.getElementById('score')
-    const placeholder = ""
+    const placeholder = "https://loremflickr.com/100/100"
 
     var cardsClicked = []
     var cardsClickedId = []
-    var cardsMatches = []
 
     // Create the board
     function createBoard() {
-        for(let i=0; i < cardArray.length; i++) {
+        for(let i = 0; i < cardArray.length; i++) {
             var card = document.createElement('img')
             card.setAttribute('src', placeholder)
             card.setAttribute('data-id', i)
@@ -69,4 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
             board.appendChild(card)
         }
     }
+
+    //flipCard function
+    function flipCard() {
+        var cardId = this.getAttribute('data-id')
+        cardsClicked.push(cardArray[cardId].name)
+        cardsClickedId.push(cardId)
+        this.setAttribute('src', cardArray[cardId].img)
+        if (cardsClicked.length ===2) {
+            setTimeout(checkForMatch, 400)
+        }
+    }
+
+    createBoard()
 })
